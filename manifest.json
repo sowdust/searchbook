@@ -1,0 +1,30 @@
+{
+  "description": "Graph search tool for Facebook",
+  "manifest_version": 2,
+  "name": "SearchBook",
+  "version": "0.1",
+
+  "permissions": [
+    "activeTab",
+    "webRequest",
+    "webRequestBlocking",
+    "https://www.facebook.com/"
+  ],
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "SearchBook",
+    "default_popup": "popup/popup.html"
+  },
+
+  "applications": {
+  "gecko": {
+    "id": "mattia.vinci@mediaservice.net",
+    "strict_min_version": "42.0"
+	 }
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
