@@ -71,4 +71,4 @@ They can be combined with the command `intersect`, for example:
 
 ## License
 
-This code is free: you can do what you want with it. Credits are appreciated. Responsability of use is all yours. Earning money out of it is not nice, but you feel it's right, go ahead and do it.
+This code is free: you can do what you want with it.
