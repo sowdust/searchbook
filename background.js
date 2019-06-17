@@ -14,16 +14,17 @@ var pattern = "https://www.facebook.com/ajax/pagelet/generic.php/BrowseScrolling
 var query_regex = /%7B%5C%22bqf%5C%22%3A%5C%22(.+?)%5C%22%2C%5C%22browse_sid%5C%22/;
 var cursor_regex = /cursor%22%3A%22(.+?)%22/;
 var page_regex = /%22page_number%22%3A(\d+)%2C/;
+var view_regex = /%7B%22view%22%3A%22([a-z]+)%22/;
+var require_grid = ['photos','videos'];
 var page_number = 1;
 
-console.log('Extension loaded');
+console.log('SearchBook Extension loaded');
 
 function error(error) {
 	console.log(error);
 }
 
 function add_warning() {
-	console.log('warning');
 	var alert_code = "var div = document.createElement('div');";
 	alert_code += "div.id='warning_message';";
 	alert_code += "div.style.position = 'fixed';";
@@ -108,6 +109,16 @@ function redirect(requestDetails) {
 	}
 	modifiedUrl = modifiedUrl.replace('%22page_number%22%3A'+ p[1] +'%2C', '%22page_number%22%3A'+ page_number +'%2C');
 	page_number = page_number + 1;
+
+	// set the right view mode
+	for(var i=0; i<require_grid.length; ++i) {
+		if(query.includes(require_grid[i])) {
+			var v = view_regex.exec(modifiedUrl);
+			if(v.length == 2) {
+				modifiedUrl = modifiedUrl.replace('%7B%22view%22%3A%22'+ v[1] +'%22', '%7B%22view%22%3A%22'+ 'grid' +'%22');
+			}
+		}
+	}
 
 	// warn the user we are intercepting
 	if(!document.getElementById('warning_message')) {

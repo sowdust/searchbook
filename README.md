@@ -59,6 +59,9 @@ likers
 users-named
 groups
 places-visited
+photos-of
+photos-liked
+videos-of
 ```
 
 They can be combined with the command `intersect`, for example:
