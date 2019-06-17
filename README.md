@@ -5,7 +5,7 @@ A Firefox extension for executing some Graph-like searches against Facebook.
 ## Disclaimer
 
 Make sure to read Facebook [Terms of Services](https://www.facebook.com/apps/site_scraping_tos_terms.php). 
-All information and code are provided for educational purposes only. Using this code might be against Facebook Terms of Service or possibly even illegal. The authors or are in no way responsible for any misuse of the information or the code provided.
+All information and code are provided for educational purposes only. Using this code might be against Facebook Terms of Service or possibly even illegal. The authors are in no way responsible for any misuse of the information or the code provided.
 
 ## About
 
@@ -18,6 +18,7 @@ When visiting a Search Results page, the user can set an arbitrary search query 
 ## Screenshots
 
 ![Getting a Facebook ID|](https://raw.githubusercontent.com/sowdust/searchbook/master/screenshots/id.png)
+
 ![Custom Graph Search](https://raw.githubusercontent.com/sowdust/searchbook/master/screenshots/search.png)
 
 ## Requirements
@@ -26,10 +27,10 @@ The extension is now only for Firefox.
 
 ## Installation
 
-* Download and extract or clone this repository.
-* Open a new browser tab in Firefox and type in the address bar `about:debugging`.
-* Select "Enable add-on debugging".
-* Click on the "Load Temporary Add-on..." button and open any file inside the code folder (e.g.: manifest.json).
+* Clone this repository or  download it as a zip file and extract it on your filesystem
+* Open a new browser tab in Firefox and type in the address bar `about:debugging`
+* Select "Enable add-on debugging"
+* Click on the "Load Temporary Add-on..." button and open any file inside the code folder (e.g.: manifest.json)
 
 ## Usage
 
