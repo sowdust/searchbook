@@ -62,6 +62,7 @@ places-visited
 photos-of
 photos-liked
 videos-of
+videos-liked
 ```
 
 They can be combined with the command `intersect`, for example:
