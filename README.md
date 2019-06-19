@@ -23,6 +23,9 @@ When visiting a Search Results page, the user can set an arbitrary search query 
 
 ![Custom Graph Search](https://raw.githubusercontent.com/sowdust/searchbook/master/screenshots/search.png)
 
+![Custom Graph Search](https://raw.githubusercontent.com/sowdust/searchbook/master/screenshots/photos-date.png)
+
+
 ## Requirements
 
 The extension is now only for Firefox.
@@ -43,9 +46,8 @@ Click "clear" to go back to normal behaviour.
 
 ### Search formats
 
-I have not yet explored all possible search keywords.
-If you know of any other working keyword and want to share this information, please open an issue on this project and I will include it in the list.
-The following operators are working:
+I have not yet explored all possible search keywords. If you have done any research and want to share it, please open an issue on this project and I will include it in this readme.
+As an example, the following operators are working:
 
 ```
 stories-liked
@@ -61,14 +63,21 @@ groups
 places-visited
 photos-of
 photos-liked
+photos-commented
+spouses
 videos-of
 videos-liked
 ```
 
 They can be combined with the command `intersect`, for example:
 
-```intersect(places-visited(4),places-visited(5))```
+```intersect(places-visited(facebook_id_1),places-visited(facebook_id_2))```
+
+You can also search for date intervals:
+
+```intersect(photos-liked(facebook_id),photos(date(2019,jun)))```
+
 
 ## License
 
-This code is free: you can do what you want with it. Credits are appreciated. Responsability of use is all yours. Earning money out of it is not nice, but you feel it's right, go ahead and do it.
+This code is free
