@@ -41,11 +41,24 @@
       #query {
         padding: 4px;
       }
+      #updates {
+        display: none;
+        background: red;
+        color: white;
+        font-weight: bold;
+        margin: 0;
+        padding: 2px;  
+        font-size: 1.2em;      
+      }
+      #updates a, #updates a:hover, #updates a:visited {
+        color: white;
+      }
       input[type=text] { height: 1.2em; }
       input[type=button] { height: 1.6em; }
   </style>
   </head>
   <body>
+    <div id="updates">The new version <span id="new-version"></span> is available!<br /> Click <a href="https://github.com/sowdust/searchbook" target="_blank">HERE</a> for downloads and installation instructions!</div>
     <div id="header">
       <a href="https://github.com/sowdust/searchbook" target="_blank">Info</a> · 
       <a href="https://github.com/sowdust/searchbook" target="_blank">Disclaimer</a> · 
