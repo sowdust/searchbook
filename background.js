@@ -43,7 +43,7 @@ function add_warning() {
 	alert_code += "console.log('warning');";
 	alert_code += "var q = '" + query + "';";
 	alert_code += "var o = '" + original_query + "';";
-	alert_code += "var t = ' <tt>Intercepting requests: ' + o + '</tt><br />';";
+	alert_code += "var t = ' <tt>Intercepting requests</tt><br />';";
 	alert_code +=  "t += '<tt>Replacing with query:  ' + q  + '</tt><br />';";
 	alert_code += "div.innerHTML = t;";
 	browser.tabs.executeScript({ code: alert_code });
