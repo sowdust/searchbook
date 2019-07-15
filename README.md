@@ -77,11 +77,11 @@ You can also search for date intervals:
 
 ```intersect(photos-liked(facebook_id),photos(date(2019,jun)))```
 
+Or date aliases:
+
+```intersect(stories-liked(facebook_id),stories(date(this-week)))```
 
 ## License
 
-<<<<<<< HEAD
-This code is free: you can do what you want with it.
-=======
 This code is free
->>>>>>> cf7ed915a8a44084b67acd73a85fd4de7d2c2797
+
