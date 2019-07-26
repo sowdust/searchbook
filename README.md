@@ -1,6 +1,6 @@
 # SearchBook ![](https://raw.githubusercontent.com/sowdust/searchbook/master/icon.png) 
 
-A Firefox extension for executing some Graph-like searches against Facebook.
+A Firefox extension for executing some Graph-like searches against Facebook. [Here](https://github.com/sowdust/searchbook-chrome/) the Chrome version.
 
 Related article: [techblog.mediaservice.net/2019/06/facebook-graphs-not-dead/](https://techblog.mediaservice.net/2019/06/facebook-graphs-not-dead/)
 
@@ -24,11 +24,6 @@ When visiting a Search Results page, the user can set an arbitrary search query 
 ![Custom Graph Search](https://raw.githubusercontent.com/sowdust/searchbook/master/screenshots/search.png)
 
 ![Custom Graph Search](https://raw.githubusercontent.com/sowdust/searchbook/master/screenshots/photos-date.png)
-
-
-## Requirements
-
-The extension is now only for Firefox.
 
 ## Installation
 
