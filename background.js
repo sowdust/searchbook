@@ -63,6 +63,32 @@ function remove_old_results() {
 	browser.tabs.executeScript({ code: clear_code });
 }
 
+function stop_scrolling() {
+	console.log('stop_scrolling');
+	clearInterval(window.interval);
+}
+
+function scroll_to_bottom() {
+
+	var scroll_code ='window.scrollTo(0, document.body.scrollHeight);';
+	var stop_scroll_code = 'document.addEventListener("keydown", function (e) {';
+	stop_scroll_code += 'if (e.key == "Escape") {   browser.runtime.sendMessage({ command: "stop_scrolling" }); }';
+	stop_scroll_code += '}, false);';
+	var html = document.documentElement.innerHTML;
+	console.log('setting interval');
+    window.interval = setInterval(function(){
+	    // if ESC key is pressed, stop the scrolling
+		browser.tabs.executeScript({ code: stop_scroll_code });
+    	html = document.documentElement.innerHTML;
+    	if (html.indexOf('browse_end_of_results_footer') >= 0) {
+        	console.log("Reached end of results");
+        	clearInterval(window.interval);
+    	}
+      	browser.tabs.executeScript({ code: scroll_code });
+      	console.log('setting interval 3');
+    },2000);
+}
+
 function redirect(requestDetails) {
 
 	if(!query) {
@@ -147,5 +173,11 @@ browser.runtime.onMessage.addListener((message) => {
 	} else if (message.command === "clear_query") {
 		console.log('Removing query');
 		query = '';
+	} else if (message.command === "scroll_to_bottom") {
+		console.log('Scrolling');
+		scroll_to_bottom();
+
+	} else if (message.command === "stop_scrolling") {
+		stop_scrolling();
 	}
 });

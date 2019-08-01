@@ -9,6 +9,12 @@
 */
 
 
+function scroll_to_bottom(){
+  browser.runtime.sendMessage({
+    command: "scroll_to_bottom"
+  });
+}
+
 function set_query() {
   query = document.getElementById('query').value;
   browser.runtime.sendMessage({
@@ -118,6 +124,10 @@ document.addEventListener("click", (e) => {
     if (e.target.classList.contains("tos")) {
       var disclaimer = div.getElementById('disclaimer');
       disclaimer.style.display = 'block';
+    }
+    if (e.target.classList.contains("scr")) {
+      console.log('Scroll link clicked');
+      scroll_to_bottom();
     }
 });
 

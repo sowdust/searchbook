@@ -20,6 +20,9 @@
         text-align: right;
         padding: 2px;
       }
+      a, a:hover, a:visited {
+        color: black;
+      }
       #header a, #header a:hover, #header a:visited {
         color: black;
       }
@@ -53,8 +56,24 @@
       #updates a, #updates a:hover, #updates a:visited {
         color: white;
       }
-      input[type=text] { height: 1.2em; }
-      input[type=button] { height: 1.6em; }
+      #scroll-down {
+        padding-top:15px;
+        margin-right: 0
+        text-align: right;
+        float: right;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+      #scroll-icon {
+        width: 20px;
+        height: 20px;
+        background-size: 20px;
+        background-repeat: no-repeat;
+        float: right;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMwMHB4JyB3aWR0aD0nMzAwcHgnICBmaWxsPSIjMDAwMDAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgdmVyc2lvbj0iMS4xIiB4PSIwcHgiIHk9IjBweCI+PHRpdGxlPkFydGJvYXJkIDEgQ29weSAxMDQ8L3RpdGxlPjxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPjxnIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMwMDAwMDAiPjxwYXRoIGQ9Ik0zMiwyMy4wMDQzNTUgTDMyLDIzLjAwNDM1NSBMMzIsNDguOTk1NjQ1IEMzMiw1OC45NDQyNjg5IDQwLjA1NjEyMSw2NyA1MCw2NyBDNTkuOTQyNjIyLDY3IDY4LDU4Ljk0MDM1MDkgNjgsNDguOTk1NjQ1IEw2OCwyMy4wMDQzNTUgQzY4LDEzLjA1NTczMTEgNTkuOTQzODc5LDUgNTAsNSBDNDAuMDU3Mzc4LDUgMzIsMTMuMDU5NjQ5MSAzMiwyMy4wMDQzNTUgTDMyLDIzLjAwNDM1NSBaIE0yOCwyMy4wMDQzNTUgQzI4LDEwLjg1MTY4NTMgMzcuODQ3MDY0LDEgNTAsMSBDNjIuMTUwMjY0NSwxIDcyLDEwLjg0MzgzODcgNzIsMjMuMDA0MzU1IEw3Miw0OC45OTU2NDUgQzcyLDYxLjE0ODMxNDcgNjIuMTUyOTM2LDcxIDUwLDcxIEMzNy44NDk3MzU1LDcxIDI4LDYxLjE1NjE2MTMgMjgsNDguOTk1NjQ1IEwyOCwyMy4wMDQzNTUgTDI4LDIzLjAwNDM1NSBaIj48L3BhdGg+PHBhdGggZD0iTTQ4LDE3LjAwODUzMDIgQzQ4LDE1Ljg5OTI0OTYgNDguODg3NzI5NiwxNSA1MCwxNSBDNTEuMTA0NTY5NSwxNSA1MiwxNS45MDE5NTA0IDUyLDE3LjAwODUzMDIgTDUyLDI0Ljk5MTQ2OTggQzUyLDI2LjEwMDc1MDQgNTEuMTEyMjcwNCwyNyA1MCwyNyBDNDguODk1NDMwNSwyNyA0OCwyNi4wOTgwNDk2IDQ4LDI0Ljk5MTQ2OTggTDQ4LDE3LjAwODUzMDIgWiI+PC9wYXRoPjxwYXRoIGQ9Ik01MCw5NS4xNzE1NzI5IEw1OC41ODU3ODY0LDg2LjU4NTc4NjQgQzU5LjM2NjgzNSw4NS44MDQ3Mzc5IDYwLjYzMzE2NSw4NS44MDQ3Mzc5IDYxLjQxNDIxMzYsODYuNTg1Nzg2NCBDNjIuMTk1MjYyMSw4Ny4zNjY4MzUgNjIuMTk1MjYyMSw4OC42MzMxNjUgNjEuNDE0MjEzNiw4OS40MTQyMTM2IEw1MS40MTQyMTM2LDk5LjQxNDIxMzYgQzUxLjAyMzY4OTMsOTkuODA0NzM3OSA1MC41MTE4NDQ2LDEwMCA1MCwxMDAgQzQ5LjQ4ODE1NTQsMTAwIDQ4Ljk3NjMxMDcsOTkuODA0NzM3OSA0OC41ODU3ODY0LDk5LjQxNDIxMzYgTDM4LjU4NTc4NjQsODkuNDE0MjEzNiBDMzcuODA0NzM3OSw4OC42MzMxNjUgMzcuODA0NzM3OSw4Ny4zNjY4MzUgMzguNTg1Nzg2NCw4Ni41ODU3ODY0IEMzOS4zNjY4MzUsODUuODA0NzM3OSA0MC42MzMxNjUsODUuODA0NzM3OSA0MS40MTQyMTM2LDg2LjU4NTc4NjQgTDUwLDk1LjE3MTU3MjkgWiI+PC9wYXRoPjxwYXRoIGQ9Ik01MCw4Mi4xNzE1NzI5IEw1OC41ODU3ODY0LDczLjU4NTc4NjQgQzU5LjM2NjgzNSw3Mi44MDQ3Mzc5IDYwLjYzMzE2NSw3Mi44MDQ3Mzc5IDYxLjQxNDIxMzYsNzMuNTg1Nzg2NCBDNjIuMTk1MjYyMSw3NC4zNjY4MzUgNjIuMTk1MjYyMSw3NS42MzMxNjUgNjEuNDE0MjEzNiw3Ni40MTQyMTM2IEw1MS40MTQyMTM2LDg2LjQxNDIxMzYgQzUxLjAyMzY4OTMsODYuODA0NzM3OSA1MC41MTE4NDQ2LDg3IDUwLDg3IEM0OS40ODgxNTU0LDg3IDQ4Ljk3NjMxMDcsODYuODA0NzM3OSA0OC41ODU3ODY0LDg2LjQxNDIxMzYgTDM4LjU4NTc4NjQsNzYuNDE0MjEzNiBDMzcuODA0NzM3OSw3NS42MzMxNjUgMzcuODA0NzM3OSw3NC4zNjY4MzUgMzguNTg1Nzg2NCw3My41ODU3ODY0IEMzOS4zNjY4MzUsNzIuODA0NzM3OSA0MC42MzMxNjUsNzIuODA0NzM3OSA0MS40MTQyMTM2LDczLjU4NTc4NjQgTDUwLDgyLjE3MTU3MjkgWiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+");'
+      }
+      input[type=text]    { height: 1.2em; }
+      input[type=button]  { height: 1.6em; }
   </style>
   </head>
   <body>
@@ -70,6 +89,9 @@
     <input type="button" name="del" value="remove" class="rem">
     <span id="current_query"></span>
     <span id="facebook_id"></span>
+    <div id="scroll-down"><a href="#" class="scr">scroll to bottom</a>
+      <div id="scroll-icon" class="scr"></div>
+    </div>
     <script src="popup.js" type="text/javascript"></script>
     <div id="disclaimer">
       This tool is provided for educational purpose only.<br />
